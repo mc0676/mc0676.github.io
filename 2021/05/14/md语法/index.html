@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="/images/favicon.png">
+  <title>md语法 | Startiney</title>
+  <meta name="author" content="星幻" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="博客" />
+  
+  <meta name="description" content=".md即Markdown，是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如GitHub、Reddit、Diaspora、St">
+<meta property="og:type" content="article">
+<meta property="og:title" content="md语法">
+<meta property="og:url" content="http://example.com/2021/05/14/md%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="Startiney">
+<meta property="og:description" content=".md即Markdown，是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如GitHub、Reddit、Diaspora、St">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/05/14/md%E8%AF%AD%E6%B3%95/https:/i.loli.net/2021/05/14/mYtx5gkU7lXwj6O.png">
+<meta property="article:published_time" content="2021-05-14T15:00:07.000Z">
+<meta property="article:modified_time" content="2021-05-25T13:55:54.597Z">
+<meta property="article:author" content="星幻">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/05/14/md%E8%AF%AD%E6%B3%95/https:/i.loli.net/2021/05/14/mYtx5gkU7lXwj6O.png">
+<meta name="twitter:site" content="@null">
+  
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" type="text/css" media="all">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-dark.min.css" type="text/css" media="all">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>友链</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-link"></i>链接</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://startiney.top">博客</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/mc0676?tab=repositories">GitHub</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">Startiney</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Startiney</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <header class="kratos-entry-header">
+                
+                    <h1 class="kratos-entry-title text-center">md语法</h1>
+                
+                
+                <ul class="kratos-post-meta text-center">
+                    <li><i class="fa fa-calendar"></i> 2021-05-14</li>
+                    <li><i class="fa fa-user"></i> 作者 星幻</li>
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~2.81K
+                        
+                        字
+                    </li>
+                    
+                        <li id="/2021/05/14/md%E8%AF%AD%E6%B3%95/" class="leancloud_visitors" data-flag-title="md语法">
+                            <i class="fa fa-eye"></i>
+                            <span class="leancloud-visitors-count"> </span> 次阅读
+                        </li>
+                        
+                    
+                </ul>
+            </header>
+            <div class="kratos-post-content">
+                <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                    本文最后编辑于 <time datetime="1621950954597"></time> 前，其中的内容可能需要更新。
+                </div>
+                
+                <hr />
+                <p>.md即Markdown，是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如GitHub、Reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge、简书等，甚至还能被使用来撰写电子书。</p>
+<h4 id="一、基本符号：-gt"><a href="#一、基本符号：-gt" class="headerlink" title="一、基本符号：* - +. &gt;"></a>一、基本符号：* - +. &gt;</h4><p>基本上所有的markdown标记都是基于这四个符号或组合，需要注意的是，如果以基本符号开头的标记，注意在基本符号后添加一个用于分割标记符与内容的空格。</p>
+<h4 id="二、标题"><a href="#二、标题" class="headerlink" title="二、标题"></a>二、标题</h4><p>1.前面带#号，后面带文字，分别表示h1-h6,只到h6。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h4 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h4><ol>
+<li>无序列表</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//形式一</span><br><span class="line">+ a</span><br><span class="line">+ b</span><br><span class="line">+ c</span><br><span class="line">//形式二</span><br><span class="line">- d</span><br><span class="line">- e</span><br><span class="line">- f</span><br><span class="line">//形式三</span><br><span class="line">* g</span><br><span class="line">* h</span><br><span class="line">* i</span><br></pre></td></tr></table></figure>
+
+<p>以上三种形式，效果都是一样的：</p>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>c</li>
+</ul>
+<ul>
+<li>d</li>
+<li>e</li>
+<li>f</li>
+</ul>
+<ul>
+<li>g</li>
+<li>h</li>
+<li>i</li>
+</ul>
+<ol start="2">
+<li>有序列表</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//正常形式</span><br><span class="line">1. abc</span><br><span class="line">2. bcd</span><br><span class="line">3. cde</span><br><span class="line">//错序效果</span><br><span class="line">6. fgh</span><br><span class="line">5. ghi</span><br><span class="line">4. hij</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<pre><code>1. abc
+2. bcd
+3. cde
+6. fgh
+5. ghi
+4. hij
+</code></pre>
+<blockquote>
+<p>有序列表的序号是根据第一行列表的数字顺序来的，错序列表的序号是乱的， 但是还是显示456。</p>
+</blockquote>
+<ol start="3">
+<li>嵌套列表</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//无序列表嵌套</span><br><span class="line">+ 123</span><br><span class="line">    + abc</span><br><span class="line">    + bcd</span><br><span class="line">    + cde</span><br><span class="line">+ 465</span><br><span class="line">+ 789</span><br><span class="line">//有序列表嵌套</span><br><span class="line">1. abcd</span><br><span class="line">    1. abcde</span><br><span class="line">    2. abcde</span><br><span class="line">    3. abcde</span><br><span class="line">2. bcde</span><br><span class="line">3. cdef</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<ul>
+<li>123<ul>
+<li>abc</li>
+<li>bcd</li>
+<li>cde</li>
+</ul>
+</li>
+<li>465</li>
+<li>789</li>
+</ul>
+<ol>
+<li>abcd<ol>
+<li>abcde</li>
+<li>abcde</li>
+<li>abcde</li>
+</ol>
+</li>
+<li>bcde</li>
+<li>cdef</li>
+</ol>
+<blockquote>
+<p>列表可以嵌套，使用时在嵌套列表前按tab或空格来缩进可以控制列表的层数。</p>
+</blockquote>
+<h4 id="四、引用说明区块"><a href="#四、引用说明区块" class="headerlink" title="四、引用说明区块"></a>四、引用说明区块</h4><p>对某个部分的内容做一些说明或者引用等。</p>
+<ol>
+<li>正常形式</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>引用因为是一个区块，理论上是应该什么内容都可以放，比如说：标题，列表，引用等等。</p>
+</blockquote>
+<ol start="2">
+<li>嵌套区块<br>可以使用多层引用。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 一级引用</span><br><span class="line">&gt;&gt; 二级引用</span><br><span class="line">&gt;&gt;&gt; 三级引用</span><br><span class="line">&gt;&gt;&gt;&gt; 四级引用</span><br><span class="line">&gt;&gt;&gt;&gt;&gt; 五级引用</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt; 六级引用</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>四级引用</p>
+<blockquote>
+<p>五级引用</p>
+<blockquote>
+<p>六级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="五、代码块"><a href="#五、代码块" class="headerlink" title="五、代码块"></a>五、代码块</h4><p>在发布一些技术文章会涉及展示代码的问题，这时候代码块就显得尤为重要。</p>
+<ol>
+<li>少量代码<br>单行使用，直接用`包裹起来就行了。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">` DanHangDaiMa `</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><code>DanHangDaiMa</code></p>
+<ol start="2">
+<li>大量代码<br>需要多行使用，用```包裹起来。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```⁣　</span><br><span class="line">    DuoHangDaiMa</span><br><span class="line">    DuoHangDaiMa</span><br><span class="line">    DuoHangDaiMa</span><br><span class="line">```⁣　</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DuoHangDaiMa</span><br><span class="line">DuoHangDaiMa</span><br><span class="line">DuoHangDaiMa</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、链接"><a href="#六、链接" class="headerlink" title="六、链接"></a>六、链接</h4><ol>
+<li>行内式<br>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接](https://startiney.top &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>参数式</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[链接]: https://startiney.top &quot;标题&quot;</span><br><span class="line">[链接]: https://startiney.top &#x27;标题&#x27;</span><br><span class="line">[链接]: https://startiney.top (标题)</span><br><span class="line">[链接]: &lt;https://startiney.top&gt; &quot;标题&quot;</span><br></pre></td></tr></table></figure>
+
+<p>以上两种方式效果是一样的：</p>
+<p><a target="_blank" rel="noopener" href="https://startiney.top/" title="标题">链接</a></p>
+<h4 id="七、图片"><a href="#七、图片" class="headerlink" title="七、图片"></a>七、图片</h4><ol>
+<li>行内式<br>和链接的形式差不多，注意的是[]前要加上!</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片](/img/logo.png &quot;标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>参数式</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片]: /img/logo.png&quot;标题&quot;</span><br><span class="line">![图片]: /img/logo.png&#x27;标题&#x27;</span><br><span class="line">![图片]: /img/logo.png(标题)</span><br><span class="line">! [图片]: &lt;/img/logo.png&gt; &quot;标题&quot;</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><img src="/img/logo.png" alt="链接" title="标题"></p>
+<h4 id="八、分割线"><a href="#八、分割线" class="headerlink" title="八、分割线"></a>八、分割线</h4><p>分割线可以由* - _这3个符号的至少3个符号表示，且不需要连续，有空格也可以。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- - -</span><br><span class="line">------</span><br><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">******</span><br><span class="line">___</span><br><span class="line">_ _ _</span><br><span class="line">______</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<hr>
+<h4 id="九、表格"><a href="#九、表格" class="headerlink" title="九、表格"></a>九、表格</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//例子一</span><br><span class="line">|123|234|345|</span><br><span class="line">|:-|:-:|-:|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">//例子二</span><br><span class="line">|123|234|345|</span><br><span class="line">|:---|:---:|---:|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">|abc|bcd|cde|</span><br><span class="line">//例子三</span><br><span class="line">123|234|345</span><br><span class="line">:-|:-:|-:</span><br><span class="line">abc|bcd|cde</span><br><span class="line">abc|bcd|cde</span><br><span class="line">abc|bcd|cde</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">234</th>
+<th align="right">345</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">234</th>
+<th align="right">345</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">123</th>
+<th align="center">234</th>
+<th align="right">345</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+<tr>
+<td align="left">abc</td>
+<td align="center">bcd</td>
+<td align="right">cde</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>分割线后面的冒号表示对齐方式，写在左边表示左对齐，右边为右对齐，两边都写表示居中。</p>
+</blockquote>
+<h4 id="十、其他"><a href="#十、其他" class="headerlink" title="十、其他"></a>十、其他</h4><ol>
+<li>强调字体<br>一个星号或者是一个下划线包起来，会转换为倾斜，如果是2个，会转换为加粗。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*md*    </span><br><span class="line">**md**</span><br><span class="line">_md_   </span><br><span class="line"> __md__</span><br></pre></td></tr></table></figure>
+
+<p>效果：</p>
+<p><em>md</em><br><strong>md</strong><br><em>md</em><br> <strong>md</strong></p>
+<p> 2.转义<br> \加需要转义的字符。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> \\</span><br><span class="line">\*</span><br><span class="line">\+</span><br><span class="line">\-</span><br><span class="line">\`</span><br><span class="line">\_</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>删除线<br>用~~把需要显示删除线的字符包裹起来。</li>
+</ol>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~删除~~</span><br></pre></td></tr></table></figure>
+
+<p> 效果：</p>
+<p> <del>删除</del></p>
+
+            </div>
+            
+                <div class="kratos-copyright text-center clearfix">
+                    <h5>本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+                </div>
+            
+            <footer class="kratos-entry-footer clearfix">
+                
+                    <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                    
+                    
+                        <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                        <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "http://example.com/2021/05/14/md%E8%AF%AD%E6%B3%95/",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "http://example.com/2021/05/14/md%E8%AF%AD%E6%B3%95/";
+            const title         = "「md语法」";
+            const excerpt       = `.md即Markdown，是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。由于Markdown的轻量化、易读易写特...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                    
+                    </div>
+                
+                <div class="footer-tag clearfix">
+                    <div class="pull-left">
+                    <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+                    </div>
+                    <div class="pull-date">
+                    <span>最后编辑：2021-05-25</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+            <nav class="navigation post-navigation clearfix" role="navigation">
+                
+                <div class="nav-previous clearfix">
+                    <a title=" 星幻的第一篇博客" href="/2021/05/14/星幻的第一篇博客/">&lt; 上一篇</a>
+                </div>
+                
+                
+                <div class="nav-next clearfix">
+                    <a title=" hexo d报错解决方案" href="/2021/05/26/hexo d报错/">下一篇 &gt;</a>
+                </div>
+                
+            </nav>
+        
+        
+            <div id="v-comments" class="post-comments"></div>
+<script>
+    var load_comm = () => {
+        const init = () => {
+            new Valine({
+                el: '#v-comments',
+                appId: 'ngvo8Bns6V5PYuX1UqanF745-MdYXbMMI',
+                appKey: 'WRePmQRd095c9T8x7KNQ5i0A',
+                placeholder: '昵称填写qq可以使用qq头像哦~',
+                enable: true,
+                visitor: true,
+                enableQQ: true,
+                path: '/2021/05/14/md%E8%AF%AD%E6%B3%95/',
+                emojiCDN: '//i0.hdslb.com/bfs/emote/',
+                emojiMaps: {
+                    "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+                    "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+                    "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+                    "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+                    "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+                    "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+                    "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+                    "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+                    "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+                    "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+                    "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+                    "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+                    "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+                    "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+                    "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+                    "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+                    "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+                    "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+                    "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+                    "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+                    "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+                    "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+                    "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+                    "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+                    "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+                    "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+                    "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+                    "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+                    "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+                    "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+                    "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+                    "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+                    "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+                    "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+                    "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+                    "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+                    "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+                    "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+                    "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+                    "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+                    "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+                    "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+                    "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+                    "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+                    "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+                    "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+                    "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+                    "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+                    "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+                    "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+                }
+            });
+        }
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
+            $.getScript(src, init);
+        } else {
+            init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by
+        Valine.</a></noscript>
+        
+    </article>
+</section>
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">startiney</p>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%A5%E9%94%99/">报错</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">2</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 0.6em;">博客</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2021/06/11/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9Chexo%E4%B8%BB%E9%A2%98-1/"><i class="fa  fa-book"></i> 如何制作hexo主题#1</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/05/26/hexo%20d%E6%8A%A5%E9%94%99/"><i class="fa  fa-book"></i> hexo d报错解决方案</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/05/14/md%E8%AF%AD%E6%B3%95/"><i class="fa  fa-book"></i> md语法</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2021/05/14/%E6%98%9F%E5%B9%BB%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"><i class="fa  fa-book"></i> 星幻的第一篇博客</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                        <li><a href="mailto:vo.magic.miku@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://t.me/CandyUnion"><i class="fa fa-telegram"></i></a></li>
+                        
+                        
+                        
+                        <li><a target="_blank" rel="me" href="https://nya.one/@Candinya"><i class="fa fa fa-share-alt-square"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/Candinya"><i class="fa fa-github"></i></a></li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2021 Startiney 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by 星幻.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://github.io" target="_blank">Github Pages</a></li>
+                        </div>
+                        <div>
+                            
+                            <li><a href="http://www.beian.gov.cn" rel="external nofollow" target="_blank"><img src="/images/psr.webp" width="12" height="12">浙公安网备 33100202001242号</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>const notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));</script>
+
+    <div>
+        <canvas id="snow"></canvas>
+        <script async type="text/javascript" src="/js/snow.min.js"></script>
+    </div>
+
+<script async src="/js/candy.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="911730850"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+
+    <script defer src="/js/kr-dark.min.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+    </body>
+</html>
